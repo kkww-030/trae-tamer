@@ -1,0 +1,16 @@
+{
+  "name": "trae-tamer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI驯服工具 · Trae 插件：全局规则 + 队友技能 + 零依赖 MCP（三档/外部记忆/留痕/开工-交付双校验）+ 状态栏徽标",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "gen": "node scripts/gen-protocol.mjs && node scripts/gen-rules.mjs",
+    "check:protocol": "node scripts/gen-protocol.mjs --check",
+    "check:rules": "node scripts/gen-rules.mjs --check",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "check": "node scripts/check.mjs",
+    "verify": "node scripts/check.mjs"
+  }
+}

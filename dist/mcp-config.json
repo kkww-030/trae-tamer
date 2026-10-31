@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "trae-tamer": {
+      "command": "node",
+      "args": [
+        "D:\\AI驯服工具\\trae-tamer\\src\\mcp-server.mjs"
+      ]
+    }
+  }
+}

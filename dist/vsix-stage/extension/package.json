@@ -1,0 +1,40 @@
+{
+  "name": "trae-tamer-badge",
+  "displayName": "AI驯服工具 · 队友徽标",
+  "description": "状态栏显示 trae-tamer MCP 是否在线、当前驯服档位与来源警示（三态：灰/绿/琥珀）。只读本地心跳文件，不联网。",
+  "version": "0.1.0",
+  "publisher": "ai-tamer-local",
+  "private": true,
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "traeTamer.showStatus",
+        "title": "trae-tamer：查看队友状态"
+      }
+    ],
+    "configuration": {
+      "title": "trae-tamer",
+      "properties": {
+        "trae-tamer.home": {
+          "type": "string",
+          "default": "",
+          "description": "trae-tamer 数据主目录（留空则用 ~/.trae-tamer，需与 MCP Server 的 TAMER_HOME 一致）"
+        },
+        "trae-tamer.pollMs": {
+          "type": "number",
+          "default": 3000,
+          "description": "心跳轮询间隔（毫秒）"
+        }
+      }
+    }
+  },
+  "scripts": {},
+  "icon": "icon.svg"
+}
